@@ -93,10 +93,21 @@ plt.plot(
     label="Ajuste MMQ"
 )
 
-plt.xlabel("Dia do ano")
-plt.ylabel("Temperatura maxima (°C)")
-plt.title("Ajuste periódico das temperaturas maximas")
-plt.legend()
-plt.grid()
+show_temps = False
 
-plt.show()
+if show_temps:
+    plt.xlabel("Dia do ano")
+    plt.ylabel("Temperatura maxima (°C)")
+    plt.title("Ajuste periódico das temperaturas maximas")
+    plt.legend()
+    plt.grid()
+    plt.show()
+
+
+
+df = pd.DataFrame({
+    "hora": np.arange(0.5, 24, 1.0),
+    "hora_norm": np.arange(0.5, 24, 1.0) / 24,
+    "T_verao": [20.5, 20.1, 19.9, 19.8, 19.6, 19.0, 19.0, 19.9, 21.8, 23.7, 25.0, 26.1, 27.0, 27.7, 27.8, 27.7, 27.2, 26.8, 25.8, 23.9, 22.2, 21.9, 21.7, 20.8],
+    "T_inverno": [15.5, 14.8, 13.2, 14.0, 13.8, 13.4, 13.2, 13.2, 14.2, 17.0, 19.9, 20.2, 23.9, 24.9, 25.7, 25.9, 25.9, 25.2, 23.8, 21.2, 19.4, 17.9, 16.8, 16.1]
+})
