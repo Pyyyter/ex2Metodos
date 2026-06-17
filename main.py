@@ -19,7 +19,7 @@ def ajustar(temperaturas, d, w):
     return coef
 
 #nome da tabela com os dados simplificados no meu computador
-df = pd.read_csv(r"C:\Users\nando\Downloads\dados_simplificados.csv")
+df = pd.read_csv(r"dados_simplificados.csv")
 
 Tmin = df["Tmin"].to_numpy()
 Tmax = df["Tmax"].to_numpy()
